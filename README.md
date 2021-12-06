@@ -9,7 +9,7 @@
 git clone https://github.com/hinorahere/lgbt-app-backend.git
 ```
 
-#### Create a virtual environment
+#### In the root of the project directory create a virtual environment
 ```
 python3 -m venv venv
 ```
@@ -17,7 +17,7 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
-#### cd into the root of the project directory and build
+#### In the root of the project directory build
 ```
 sudo docker-compose build
 ```
