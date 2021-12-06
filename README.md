@@ -7,8 +7,7 @@
 git clone https://github.com/hinorahere/lgbt-app-backend.git
 ```
 
-### Create a superuser
-### cd into the root of the project directory and run
+### cd into the root of the project directory and create a superuser
 ```
 sudo docker-compose run --rm app sh -c "python manage.py createsuperuser"
 ```
