@@ -22,7 +22,7 @@ sudo docker-compose build
 sudo docker-compose up
 ```
 
-#### If successful, you should receive out like the following
+#### If successful, you should receive output similar to the following
 ![Screenshot from 2021-12-06 09-38-15](https://user-images.githubusercontent.com/25420200/144894805-7a5676e2-d0a9-40c3-bd5b-2426be33dca1.png)
 
 ## Reverse Proxy to Handle Static Media Files
