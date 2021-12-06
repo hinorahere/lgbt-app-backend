@@ -21,6 +21,8 @@ source venv/bin/activate
 ```
 sudo docker-compose build
 ```
+#### Successful output should be similar to the following
+![Screenshot from 2021-12-06 10-28-02](https://user-images.githubusercontent.com/25420200/144901663-70b3ab10-32ec-48fe-a35f-2e5610ac1043.png)
 
 #### In the root of the project directory and create a superuser
 ```
