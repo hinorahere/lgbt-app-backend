@@ -1,0 +1,13 @@
+# LGBT Dating App Backend
+
+## Set up
+
+## Clone Repo
+```
+git clone https://github.com/hinorahere/lgbt-app-backend.git
+
+```
+
+
+## Reverse Proxy to Handle Static Media Files
+![Blank diagram](https://user-images.githubusercontent.com/25420200/137376358-0e823b30-c633-421f-a780-605692f03ee9.png)
