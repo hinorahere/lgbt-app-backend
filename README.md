@@ -1,6 +1,6 @@
 # LGBT Dating App Backend
 
-## Set up
+## Development set up
 
 ### Clone Repo
 ```
