@@ -5,14 +5,12 @@
 ### Clone Repo
 ```
 git clone https://github.com/hinorahere/lgbt-app-backend.git
-
 ```
 ### cd into the root of the project directory and run
 ```
 sudo docker-compose build
 
 sudo docker-compose up
-
 ```
 
 
