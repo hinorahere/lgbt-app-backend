@@ -34,5 +34,5 @@ http://localhost:8000/admin/
 ```
 
 ## System Design
-## Reverse Proxy to Handle Static Media Files
+#### Reverse Proxy to Handle Static Media Files
 ![Blank diagram](https://user-images.githubusercontent.com/25420200/137376358-0e823b30-c633-421f-a780-605692f03ee9.png)
