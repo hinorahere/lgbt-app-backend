@@ -18,7 +18,7 @@ sudo docker-compose build
 ```
 sudo docker-compose run --rm app sh -c "python manage.py createsuperuser"
 ```
-
+#### Run
 ```
 sudo docker-compose up
 ```
