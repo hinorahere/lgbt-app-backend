@@ -28,5 +28,10 @@ sudo docker-compose up
 #### Find the correct port number
 ![Screenshot from 2021-12-06 09-52-58](https://user-images.githubusercontent.com/25420200/144896820-2c2e83f6-c072-4a3c-babc-ce9669f4c7e4.png)
 
+#### Using the assigned port number visit the following url and sign in with your superuser credentials
+```
+http://localhost:8000/admin/
+```
+
 ## Reverse Proxy to Handle Static Media Files
 ![Blank diagram](https://user-images.githubusercontent.com/25420200/137376358-0e823b30-c633-421f-a780-605692f03ee9.png)
