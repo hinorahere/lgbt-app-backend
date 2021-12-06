@@ -21,7 +21,7 @@ source venv/bin/activate
 ```
 sudo docker-compose build
 ```
-#### In the root of the project directory and create a superuser
+#### In the root of the project directory create a superuser
 ```
 sudo docker-compose run --rm app sh -c "python manage.py createsuperuser"
 ```
