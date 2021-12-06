@@ -21,7 +21,7 @@ source venv/bin/activate
 ```
 sudo docker-compose build
 ```
-#### Then run to serve
+#### Run 
 ```
 sudo docker-compose up
 ```
