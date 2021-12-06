@@ -1,4 +1,4 @@
-# ![icons8-heart-rainbow-48](https://user-images.githubusercontent.com/25420200/144893690-d1c7764a-a2f2-4223-9bf4-adf80b9852ba.png) LGBT Dating App Backend ![icons8-heart-rainbow-48](https://user-images.githubusercontent.com/25420200/144893690-d1c7764a-a2f2-4223-9bf4-adf80b9852ba.png)
+# ![icons8-heart-rainbow-48](https://user-images.githubusercontent.com/25420200/144893690-d1c7764a-a2f2-4223-9bf4-adf80b9852ba.png) ![icons8-heart-rainbow-48](https://user-images.githubusercontent.com/25420200/144893690-d1c7764a-a2f2-4223-9bf4-adf80b9852ba.png) ![icons8-heart-rainbow-48](https://user-images.githubusercontent.com/25420200/144893690-d1c7764a-a2f2-4223-9bf4-adf80b9852ba.png) LGBT Dating App Backend ![icons8-heart-rainbow-48](https://user-images.githubusercontent.com/25420200/144893690-d1c7764a-a2f2-4223-9bf4-adf80b9852ba.png) ![icons8-heart-rainbow-48](https://user-images.githubusercontent.com/25420200/144893690-d1c7764a-a2f2-4223-9bf4-adf80b9852ba.png) ![icons8-heart-rainbow-48](https://user-images.githubusercontent.com/25420200/144893690-d1c7764a-a2f2-4223-9bf4-adf80b9852ba.png)
 
 ## Development set up
 
