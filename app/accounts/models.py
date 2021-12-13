@@ -28,5 +28,9 @@ class CustomUser(AbstractUser):
     prospects = models.ManyToManyField(settings.AUTH_USER_MODEL,
                                        related_name='+',
                                        blank=True)
+
+    rejects = models.ManyToManyField(settings.AUTH_USER_MODEL,
+                                     related_name='+',
+                                     blank=True)
     def __str__(self):
         return self.email
