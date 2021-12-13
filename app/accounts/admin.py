@@ -7,7 +7,8 @@ class CustomUserAdmin(admin.ModelAdmin):
     fields = ('email',
               'profile',
               'matches',
-              'prospects')
+              'prospects',
+              'rejects')
     list_display = ('id', 'email', 'profile')
 
 
