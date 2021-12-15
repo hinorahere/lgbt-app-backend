@@ -11,22 +11,28 @@ from django.conf import settings
 from accounts.models import CustomUser as User
 
 # {"id":5}
-@api_view(['GET','POST'])
+@api_view(['POST'])
 def match(request):
     if request.method == 'POST':
-        # current_user = request.user.id
-        # prospective_user = request.data["id"]
-        # User = settings.AUTH_USER_MODEL
+        if not isinstance(request.data["prospective_id"], int):
+            raise TypeError("prospective_id must be of type int")
+
         try:
             current_user = User.objects.get(id=request.user.id)
-        except Exception as e:
-            raise
-        print(dir(current_user))
-        print(current_user.pk)
-        print(current_user.prospects)
-        print("^^^^^^^^^^^^^^^^")
-        return Response("current_user")
-    return Response({"message": "GET"})
+            prospective_id = int(request.data["prospective_id"])
+        except Exception as error:
+            raise Exception(repr(error))
+
+        match = False
+        for prospect in current_user.prospects.all():
+            if int(str(prospect)) == prospective_id:
+                match = True
+                break
+
+        return Response(match)
+
+    return Response(request, status=405)
+
 
 class MatchList(APIView):
 

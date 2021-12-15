@@ -33,4 +33,4 @@ class CustomUser(AbstractUser):
                                      related_name='+',
                                      blank=True)
     def __str__(self):
-        return self.username
+        return str(self.pk)
