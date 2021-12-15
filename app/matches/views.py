@@ -6,11 +6,9 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
 
-from django.conf import settings
-
 from accounts.models import CustomUser as User
 
-# {"id":5}
+
 @api_view(['POST'])
 def match(request):
     if request.method == 'POST':
@@ -31,8 +29,6 @@ def match(request):
 
         return Response(match)
 
-    return Response(request, status=405)
-
 
 class MatchList(APIView):
 
@@ -41,6 +37,7 @@ class MatchList(APIView):
 
     def post(self, request, format=None):
         return Response("MatchList POST")
+
 
 class MatchDetail(APIView):
 
