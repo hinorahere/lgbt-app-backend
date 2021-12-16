@@ -37,6 +37,8 @@ def match(request):
         if match:
             current_user.matches.add(prospective_user)
             prospective_user.matches.add(current_user)
+            current_user.prospects.remove(prospective_user)
+            prospective_user.prospects.remove(current_user)
         else:
             current_user.prospects.add(prospective_user)
 
