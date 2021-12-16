@@ -48,7 +48,13 @@ def match(request):
 class MatchList(APIView):
 
     def get(self, request, format=None):
-        return Response("MatchList GET")
+        try:
+            current_user_id = request.user.id
+            current_user = User.objects.get(id=current_user_id)
+        except Exception as error:
+            raise Exception(repr(error))
+
+        return Response([int(str(val)) for val in current_user.matches.all()])
 
     def post(self, request, format=None):
         return Response("MatchList POST")
