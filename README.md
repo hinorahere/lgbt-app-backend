@@ -11,8 +11,11 @@
 ```
 git clone https://github.com/hinorahere/lgbt-app-backend.git
 ```
+```
+cd lgbt-app-backend
+```
 
-#### In the root of the project directory create a virtual environment
+#### create a virtual environment
 ```
 python3 -m venv venv
 ```
