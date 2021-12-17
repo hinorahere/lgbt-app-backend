@@ -45,7 +45,7 @@ sudo docker-compose run --rm app sh -c "python manage.py createsuperuser"
 sudo docker-compose up
 ```
 
-#### Find the correct port number
+#### Find the port number
 ![Screenshot from 2021-12-06 09-52-58](https://user-images.githubusercontent.com/25420200/144896820-2c2e83f6-c072-4a3c-babc-ce9669f4c7e4.png)
 
 #### Using the assigned port number visit the following url and sign in with your superuser credentials
