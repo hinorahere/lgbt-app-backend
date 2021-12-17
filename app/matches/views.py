@@ -10,7 +10,7 @@ from accounts.models import CustomUser as User
 
 
 @api_view(['POST'])
-def match(request):
+def match_check(request):
     if request.method == 'POST':
         # Type check(s)
         if not isinstance(request.data["prospective_id"], int):
@@ -24,6 +24,13 @@ def match(request):
             current_user = User.objects.get(id=current_user_id)
         except Exception as error:
             raise Exception(repr(error))
+
+        # Check if current user is in prospective user's
+        # rejection list
+        for user_id in prospective_user.rejects.all():
+            if int(str(user_id)) == current_user_id:
+                current_user.rejects.add(prospective_user)
+                return Response(False)
 
         # Determine if users are a match
         match = False
