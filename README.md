@@ -37,7 +37,7 @@ sudo docker-compose up
 ```
 sudo docker-compose run --rm app sh -c "python manage.py createsuperuser"
 ```
-#### Then run to serve again
+#### Then,serve again
 ```
 sudo docker-compose up
 ```
