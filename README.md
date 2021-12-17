@@ -23,7 +23,7 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
-#### In the root of the project directory build
+#### Build the project
 ```
 sudo docker-compose build
 ```
