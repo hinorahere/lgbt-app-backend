@@ -15,7 +15,7 @@ git clone https://github.com/hinorahere/lgbt-app-backend.git
 cd lgbt-app-backend
 ```
 
-#### create a virtual environment
+#### Create a virtual environment
 ```
 python3 -m venv venv
 ```
