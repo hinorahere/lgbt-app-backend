@@ -3,7 +3,8 @@ from rest_framework.urlpatterns import format_suffix_patterns
 from matches import views
 
 urlpatterns = [
-    path('match/', views.match_check),
+    path('match_check/', views.match_check),
+    path('match_decline/', views.match_decline),
     path('matches/', views.MatchList.as_view())
 ]
 
