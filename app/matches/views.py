@@ -25,7 +25,7 @@ def match_decline(request):
 
         return Response("Declined")
 
-        
+
 @api_view(['POST'])
 def match_check(request):
     if request.method == 'POST':
@@ -63,6 +63,23 @@ def match_check(request):
 
         return Response([int(str(val)) for val in current_user.matches.all()])
 
+@api_view(['DELETE'])
+def match_remove(request):
+    if request.method == 'DELETE':
+        current_user = get_user(request.user.id)
+        prospective_user = get_user(int(request.data["prospective_id"]))
+
+        current_user.matches.remove(prospective_user)
+        prospective_user.matches.remove(current_user)
+
+        current_user.prospects.remove(prospective_user)
+        prospective_user.prospects.remove(current_user)
+
+        current_user.rejects.add(prospective_user)
+        prospective_user.rejects.add(current_user)
+
+        return Response("Removed")
+
 
 class MatchList(APIView):
 
@@ -72,18 +89,3 @@ class MatchList(APIView):
 
     def post(self, request, format=None):
         return Response("MatchList POST")
-
-
-class MatchDetail(APIView):
-
-    def get(self, request, pk, format=None):
-        return Response("MatchDetail GET")
-
-    def put(self, request, pk, format=None):
-        return Response("MatchDetail PUT")
-
-    def patch(self, request, pk, format=None):
-        return Response("MatchDetail PATCH")
-
-    def delete(self, request, pk, format=None):
-        return Response("MatchDetail DELETE")
