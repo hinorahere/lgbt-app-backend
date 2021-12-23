@@ -63,6 +63,7 @@ def match_check(request):
 
         return Response([int(str(val)) for val in current_user.matches.all()])
 
+
 @api_view(['DELETE'])
 def match_remove(request):
     if request.method == 'DELETE':
@@ -81,11 +82,8 @@ def match_remove(request):
         return Response("Removed")
 
 
-class MatchList(APIView):
-
-    def get(self, request, format=None):
+@api_view(['GET'])
+def match_list(request):
+    if request.method == 'GET':
         current_user = get_user(request.user.id)
         return Response([int(str(val)) for val in current_user.matches.all()])
-
-    def post(self, request, format=None):
-        return Response("MatchList POST")

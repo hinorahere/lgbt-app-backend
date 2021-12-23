@@ -6,7 +6,7 @@ urlpatterns = [
     path('match_check/', views.match_check),
     path('match_decline/', views.match_decline),
     path('match_remove/', views.match_remove),
-    path('matches/', views.MatchList.as_view())
+    path('match_list/', views.match_list),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)
