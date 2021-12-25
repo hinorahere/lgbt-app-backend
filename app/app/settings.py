@@ -47,11 +47,13 @@ INSTALLED_APPS = [
 
     # 3rd Party
     'rest_framework',
+    'channels',
 
     # Local
     'accounts',
     'core',
     'matches',
+    'messaging',
     'profiles',
 ]
 
@@ -84,6 +86,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'app.wsgi.application'
+
+ASGI_APPLICATION = "app.asgi.application"
 
 
 # Database
