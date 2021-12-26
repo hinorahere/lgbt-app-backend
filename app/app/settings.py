@@ -51,9 +51,9 @@ INSTALLED_APPS = [
 
     # Local
     'accounts',
+    'chat',
     'core',
     'matches',
-    'messaging',
     'profiles',
 ]
 
@@ -87,7 +87,16 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'app.wsgi.application'
 
-ASGI_APPLICATION = "app.asgi.application"
+# Channels
+ASGI_APPLICATION = 'app.asgi.application'
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [('redis', 6379)],
+        },
+    },
+}
 
 
 # Database

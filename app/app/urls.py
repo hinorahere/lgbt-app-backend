@@ -25,7 +25,7 @@ urlpatterns = [
     path('api/', include('profiles.urls')),
     path('api/', include('matches.urls')),
 
-    path('messaging/', include('messaging.urls')),
+    path('chat/', include('chat.urls')),
 ]
 
 
