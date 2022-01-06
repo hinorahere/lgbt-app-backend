@@ -1,6 +1,17 @@
 from rest_framework import serializers
 
-from .models import Profile
+from .models import Photo, Profile
+
+
+class PhotoSerializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta:
+        model = Photo
+        fields = ('id',
+                  'name',
+                  'photo',
+              )
+
 
 
 class ProfileSerializer(serializers.HyperlinkedModelSerializer):
@@ -10,4 +21,9 @@ class ProfileSerializer(serializers.HyperlinkedModelSerializer):
         fields = ('id',
                   'first_name',
                   'last_name',
-                  'bio', )
+                  'bio',
+                  'profile_picture',
+              )
+
+
+
