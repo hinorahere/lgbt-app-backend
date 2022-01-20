@@ -69,11 +69,11 @@ http://localhost:8000/admin/
 }
 ```
 
-#### /api/user/
+### /api/user/
 * GET
 * POST
 
-#### Sample Header
+### Sample Header
 ```
 {
     "Authorization": "TOKEN <token>"
