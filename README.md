@@ -58,6 +58,8 @@ http://localhost:8000/admin/
 
 ## API
 
+
+## Auth
 ### /api-token-auth/
 * POST
 
