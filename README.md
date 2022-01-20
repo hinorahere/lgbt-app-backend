@@ -68,3 +68,23 @@ http://localhost:8000/admin/
     "password": "password"
 }
 ```
+
+#### /api/user/
+* GET
+* POST
+
+#### Sample Header
+```
+{
+    "Authorization": "TOKEN <token>"
+}
+```
+
+#### Sample Response
+```
+{
+    "username": "<username>",
+    "email": "<email>",
+    "password": "<encrypted string>"
+}
+```
