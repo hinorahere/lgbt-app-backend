@@ -60,3 +60,11 @@ http://localhost:8000/admin/
 
 #### /api-token-auth/
 * POST
+
+##### Sample Body
+```
+{
+    "username": "test@test.com",
+    "password": "password"
+}
+```
