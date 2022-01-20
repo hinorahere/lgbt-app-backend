@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
+from rest_framework.authtoken import views
 
 
 urlpatterns = [
@@ -24,8 +25,11 @@ urlpatterns = [
 
     path('api/', include('profiles.urls')),
     path('api/', include('matches.urls')),
+    path('api/', include('accounts.urls', namespace='api')),
+    path('api-token-auth/', views.obtain_auth_token, name='api-token-auth'),
 
     path('chat/', include('chat.urls')),
+
 ]
 
 
