@@ -88,3 +88,13 @@ http://localhost:8000/admin/
     "password": "<encrypted string>"
 }
 ```
+
+### /api/match_check/
+* POST
+
+#### Sample Body
+```
+{
+    "prospective_id": 5
+}
+```
