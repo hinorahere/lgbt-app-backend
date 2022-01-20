@@ -57,3 +57,6 @@ http://localhost:8000/admin/
 ![Blank diagram](https://user-images.githubusercontent.com/25420200/137376358-0e823b30-c633-421f-a780-605692f03ee9.png)
 
 ## API
+
+#### /api-token-auth/
+* POST
