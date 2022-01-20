@@ -58,7 +58,7 @@ http://localhost:8000/admin/
 
 ## API
 
-#### /api-token-auth/
+### /api-token-auth/
 * POST
 
 ##### Sample Body
@@ -73,7 +73,7 @@ http://localhost:8000/admin/
 * GET
 * POST
 
-### Sample Header
+#### Sample Header
 ```
 {
     "Authorization": "TOKEN <token>"
