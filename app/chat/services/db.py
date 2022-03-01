@@ -2,6 +2,15 @@ import json
 from channels.db import database_sync_to_async
 
 from chat.models import Message, Room
+from matches.services import get_user
+
+def get_room(room_id):
+    try:
+        room = Room.objects.get(id=room_id)
+    except Exception as error:
+        raise Exception(repr(error))
+
+    return room
 
 
 @database_sync_to_async
@@ -18,9 +27,12 @@ def save_message(data):
     if null_check:
         return ''
 
-    message = data_json['message']
-    message_content = data
+    ''' WARNING HARD CODED '''
+    user = get_user(1)
+    room = get_room(1)
+    message_data = Message(user=user,
+                           message=data_json['message'],
+                           room=room)
+    message_data.save()
 
-
-
-    return message
+    return data_json['message']
