@@ -2,6 +2,9 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.permissions import IsAdminUser
+from rest_framework.decorators import api_view, authentication_classes, permission_classes
+from rest_framework.authentication import SessionAuthentication, BasicAuthentication
+from rest_framework.permissions import IsAuthenticated
 
 from accounts.models import CustomUser as User
 from .serializers import UserSerializer
@@ -35,3 +38,11 @@ class UserRecordView(APIView):
             },
             status=status.HTTP_400_BAD_REQUEST
         )
+
+@api_view(['GET'])
+# @authentication_classes([SessionAuthentication])
+# @permission_classes([IsAuthenticated])
+def get_user(request):
+    user = User.objects.get(pk=request.user.id)
+    serializer = UserSerializer(user)
+    return Response(serializer.data['id'])

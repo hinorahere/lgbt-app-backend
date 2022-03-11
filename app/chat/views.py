@@ -17,6 +17,8 @@ def room(request, room_name):
         'room_name': room_name
     })
 
+
+# Create serializer!!!!! and remove safe=False ******************
 @api_view(['GET'])
 def get_messages(request, room_id):
     if request.method == 'GET':
