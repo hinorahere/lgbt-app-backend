@@ -45,4 +45,7 @@ class UserRecordView(APIView):
 def get_user(request):
     user = User.objects.get(pk=request.user.id)
     serializer = UserSerializer(user)
-    return Response(serializer.data['id'])
+
+    res = {}
+    res['id'] = serializer.data['id']
+    return Response(res)
