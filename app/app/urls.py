@@ -27,6 +27,7 @@ urlpatterns = [
     path('api/', include('matches.urls')),
     path('api/', include('chat.message_urls')),
     path('api/', include('accounts.urls', namespace='api')),
+    path('api/', include('accounts.get_user_url')),
     path('api-token-auth/', views.obtain_auth_token, name='api-token-auth'),
 
     path('chat/', include('chat.urls')),
