@@ -27,8 +27,7 @@ def save_message(data):
     if null_check:
         return ''
 
-    ''' WARNING HARD CODED '''
-    user = get_user(1)
+    user = get_user(data_json['user_id'])
     room = get_room(1)
     message_data = Message(user=user,
                            message=data_json['message'],
