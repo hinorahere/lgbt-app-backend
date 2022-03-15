@@ -9,7 +9,7 @@ class RoomAdmin(admin.ModelAdmin):
 
 class MessageAdmin(admin.ModelAdmin):
     fields = ('message','room', 'user')
-    list_display = ('id', 'message','room', 'user',)
+    list_display = ('id', 'message','room', 'user', 'created_at')
 
 
 admin.site.register(Room, RoomAdmin)

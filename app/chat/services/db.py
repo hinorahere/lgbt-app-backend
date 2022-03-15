@@ -30,7 +30,8 @@ def save_message(data):
     user = get_user(data_json['user_id'])
     room = get_room(1)
     message_data = Message(user=user,
-                           message=data_json['message'],
+                           message = data_json['message'],
+                           created_at = data_json['created_at'], 
                            room=room)
     message_data.save()
 

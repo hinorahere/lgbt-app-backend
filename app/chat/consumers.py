@@ -28,7 +28,7 @@ class ChatConsumer(AsyncWebsocketConsumer):
 
     # Receive message from WebSocket
     async def receive(self, text_data):
-
+        print("WEadg", text_data)
         message = await save_message(text_data)
 
         # Send message to room group
