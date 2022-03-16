@@ -25,7 +25,7 @@ def get_messages(request, room_id):
         room = get_room(room_id)
 
         try:
-            messages = Message.objects.filter(room=room).values()
+            messages = Message.objects.filter(room=room).values().order_by('created_at')
         except Exception as error:
             raise Exception(repr(error))
 
