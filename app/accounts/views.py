@@ -48,4 +48,7 @@ def get_user(request):
 
     res = {}
     res['id'] = serializer.data['id']
+    res['email'] = serializer.data['email']
+    res['profile'] = serializer.data['profile']
+
     return Response(res)

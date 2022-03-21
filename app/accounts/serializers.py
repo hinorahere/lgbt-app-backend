@@ -13,9 +13,9 @@ class UserSerializer(serializers.ModelSerializer):
         model = CustomUser
         fields = ['id',
                   'username',
-                  'email',
-                  'password',
-                  'prospects',]
+                  'email',    
+                  'prospects',
+                  'profile']
 
         validators = [
             UniqueTogetherValidator(
