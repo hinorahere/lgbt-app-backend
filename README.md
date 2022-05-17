@@ -182,5 +182,45 @@ http://localhost:8000/admin/
 {
     "prospective_id": <id>
 }
+```
+
+#### /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+### /api/profile/
+* POST
+
+- Allows current user to create a profile
+- Token Required
+
+#### Sample Header
+```
+{
+    "Authorization": "TOKEN <token>"
+}
+```
+
+#### Sample Body
+```
+{
+    "first_name": "TEST",
+    "last_name": "TEST"
+}
+```
+
+#### /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+### /api/profile/<pk>/
+
+* GET
+
+- Allows current user get their profile
+- Token Required
+
+#### Sample Header
+```
+{
+    "Authorization": "TOKEN <token>"
+}
+```
 
 #### /////////////////////////////////////////////////////////////////////////////////////////////////////////////
