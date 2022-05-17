@@ -10,9 +10,10 @@ from profiles.models import Profile
 
 class CustomUser(AbstractUser):
     email = models.EmailField(_('email address'), unique=True)
+    username = models.CharField(max_length=40)
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = []
+    REQUIRED_FIELDS = ['username']
 
     objects = CustomUserManager()
 
@@ -20,7 +21,7 @@ class CustomUser(AbstractUser):
                                 on_delete=models.CASCADE,
                                 blank=True,
                                 null=True)
-
+                                
     matches = models.ManyToManyField(settings.AUTH_USER_MODEL,
                                      related_name='+',
                                      blank=True)
