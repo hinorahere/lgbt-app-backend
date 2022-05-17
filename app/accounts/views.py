@@ -39,9 +39,8 @@ class UserRecordView(APIView):
             status=status.HTTP_400_BAD_REQUEST
         )
 
+
 @api_view(['GET'])
-# @authentication_classes([SessionAuthentication])
-# @permission_classes([IsAuthenticated])
 def get_user(request):
     user = User.objects.get(pk=request.user.id)
     serializer = UserSerializer(user)

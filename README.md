@@ -86,9 +86,11 @@ http://localhost:8000/admin/
 #### Sample Response
 ```
 {
+    "id": <id>
     "username": "<username>",
     "email": "<email>",
-    "password": "<encrypted string>"
+    "prospects": [],
+    "profile": <id>
 }
 ```
 
