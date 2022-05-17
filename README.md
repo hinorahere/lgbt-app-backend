@@ -75,6 +75,7 @@ http://localhost:8000/admin/
 ### /api/user/
 * GET
 * POST
+- Token Required
 
 #### Sample Header
 ```
@@ -85,13 +86,16 @@ http://localhost:8000/admin/
 
 #### Sample Response
 ```
-{
+
+[
+  {
     "id": <id>
     "username": "<username>",
     "email": "<email>",
     "prospects": [],
     "profile": <id>
-}
+  }
+]
 ```
 
 #### /////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -104,6 +108,16 @@ http://localhost:8000/admin/
 ### /api/match_check/
 * POST
 
+- Checks if passed prospective user is match with current user.
+- Token Required
+
+#### Sample Header
+```
+{
+    "Authorization": "TOKEN <token>"
+}
+```
+
 #### Sample Body
 ```
 {
@@ -113,13 +127,33 @@ http://localhost:8000/admin/
 
 #### /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-### /api/matches/
+### /api/match_list/
 * GET
+
+- Returns the current user's matches
+- Token Required
+
+#### Sample Header
+```
+{
+    "Authorization": "TOKEN <token>"
+}
+```
 
 #### /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 ### /api/match_decline/
 * POST
+
+- Current user rejects prospective user and puts both users on each others reject list
+- Token Required
+
+#### Sample Header
+```
+{
+    "Authorization": "TOKEN <token>"
+}
+```
 
 #### Sample Body
 ```
@@ -132,6 +166,16 @@ http://localhost:8000/admin/
 
 ### /api/match_remove/
 * DELETE
+
+- Allows current user to remove an already matched prospective user. Puts both users on each others reject list
+- Token Required
+
+#### Sample Header
+```
+{
+    "Authorization": "TOKEN <token>"
+}
+```
 
 #### Sample Body
 ```
