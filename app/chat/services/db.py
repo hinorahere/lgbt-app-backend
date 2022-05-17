@@ -29,7 +29,7 @@ def save_message(data):
 
     user = get_user(data_json['user_id'])
 
-    // ********** Fix hardcode room ID *************
+    # ********** Fix hardcode room ID *************
     room = get_room(1)
     message_data = Message(user=user,
                            message = data_json['message'],
