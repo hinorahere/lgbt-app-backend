@@ -28,7 +28,10 @@ class ChatConsumer(AsyncWebsocketConsumer):
 
     # Receive message from WebSocket
     async def receive(self, text_data):
-        print("WEadg", text_data)
+        '''
+            Function takes message, adds message to DB, and sends
+            the message back to the client
+        '''
         message = await save_message(text_data)
 
         # Send message to room group
