@@ -9,7 +9,6 @@ class Photo(models.Model):
         return self.name
 
 
-
 class Profile(models.Model):
     first_name = models.CharField(max_length=40)
     last_name = models.CharField(max_length=100, blank=True, null=True)

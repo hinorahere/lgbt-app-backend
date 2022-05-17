@@ -13,7 +13,6 @@ class PhotoSerializer(serializers.HyperlinkedModelSerializer):
               )
 
 
-
 class ProfileSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
@@ -24,6 +23,3 @@ class ProfileSerializer(serializers.HyperlinkedModelSerializer):
                   'bio',
                   'profile_picture',
               )
-
-
-
