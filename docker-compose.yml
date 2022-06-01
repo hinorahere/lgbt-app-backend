@@ -3,13 +3,19 @@ version: '3'
 services:
   app:
     build:
+      # Finds Dockerfile in current directory
       context: .
     command: >
       sh -c "python manage.py wait_for_db &&
              python manage.py migrate &&
+             python manage.py test &&
              python manage.py runserver 0.0.0.0:8000"
+    # Map port 8000 in our container to port 8000 on our local machine
     ports:
       - 8000:8000
+    # Map volumes from local app directory to app directory in our container
+    # Changes to local app code will update code in our container
+    # Only needed for development server
     volumes:
       - ./app:/app
     environment:
@@ -19,6 +25,7 @@ services:
       - DB_NAME=devdb
       - DB_USER=devuser
       - DB_PASS=changeme
+    # Create connection to db container
     depends_on:
       - db
 

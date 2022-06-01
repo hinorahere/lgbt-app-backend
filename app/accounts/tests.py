@@ -9,7 +9,7 @@ class ModelTests(TestCase):
         Test new user creation with an email is successful
         """
         username = 'adminAdmin123'
-        email = 'test@gmail.com'
+        email = 'test@test.com'
         password = 'Password123'
         user = get_user_model().objects.create_user(
             username=username,
